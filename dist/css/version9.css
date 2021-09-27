@@ -16387,4 +16387,18 @@ div[cell-gr^="[-gh"][cell-gr$="]"][cell-gr*="-ab"] .gr-row .gr-col:nth-child(1) 
   margin-left: -40px;
   margin-top: -15px;
 }
+/*combo alignments*/
+div[cell-cm^="["][cell-cm$="]"][cell-cm*="-cc"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+div[cell-cm^="["][cell-cm$="]"][cell-cm*="-cl"] {
+    margin-right: auto;
+}
+div[cell-cm^="["][cell-cm$="]"][cell-cm*="-cr"] {
+    margin-left: auto;
+}
+div[cell-cm^="["][cell-cm$="]"][cell-cm*="-cs"] {
+    align-self: stretch;
+}
 /*# sourceMappingURL=version9.css.map */
