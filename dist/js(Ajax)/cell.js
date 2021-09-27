@@ -5591,3 +5591,271 @@ $(document).ajaxStop(function () {
         .resize();
 
 });
+//For combo
+$(document).ajaxStop(function () {
+    $(window).resize(function () {
+        $("[cell-cm]").each(function () {
+            var col = $(this).attr('cell-cm').match(/[c][^,]*?(\d{1,})*/i);
+            var colDesk = $(this).attr('cell-cm').match(/[d][^,]*?(\d{1,})*/i);
+            var colLarge = $(this).attr('cell-cm').match(/[l][^,]*?(\d{1,})*/i);
+            var colTab = $(this).attr('cell-cm').match(/[t][^,]*?(\d{1,})*/i);
+            var colMobile = $(this).attr('cell-cm').match(/[m][^,]*?(\d{1,})*/i);
+            var colSmall = $(this).attr('cell-cm').match(/[s][^,]*?(\d{1,})*/i);
+            var width = $(this).attr('cell-cm').match(/[w][i](\d{1,})*/i);
+            var widthPer = $(this).attr('cell-cm').match(/[w][i][.](\d{1,})*/i);
+            var height = $(this).attr('cell-cm').match(/[h][t](\d{1,})*/i);
+            var border = $(this).attr('cell-cm').match(/[b][o](\d{1,})[^\w\*](\d{1,})/i);
+            var radius = $(this).attr('cell-cm').match(/[r][a](\d{1,})*/i);
+            var radiusPer = $(this).attr('cell-cm').match(/[r][a][.](\d{1,})*/i);
+            var padding = $(this).attr('cell-cm').match(/[p][a](\d{1,})*/i);
+            var margin = $(this).attr('cell-cm').match(/[m][a](\d{1,})*/i);
+            var backGround = $(this).attr('cell-cm').match(/[b][g](\d{1,})*/i);
+
+            var ele = $(this).attr('cell-cm').match(/[c]/i);
+            var eleD = $(this).attr('cell-cm').match(/[d]/i);
+            var eleL = $(this).attr('cell-cm').match(/[l]/i);
+            var eleT = $(this).attr('cell-cm').match(/[t]/i);
+            var eleM = $(this).attr('cell-cm').match(/[m]/i);
+            var eleS = $(this).attr('cell-cm').match(/[s]/i);
+            var eleW = $(this).attr('cell-cm').match(/[w][i]/i);
+            var eleWp = $(this).attr('cell-cm').match(/[w][i][.]/i);
+            var eleH = $(this).attr('cell-cm').match(/[h][t]/i);
+            var eleB = $(this).attr('cell-cm').match(/[b][o]/i);
+            var eleBg = $(this).attr('cell-cm').match(/[b][g]/i);
+            var eleR = $(this).attr('cell-cm').match(/[r][a]/i);
+            var eleRp = $(this).attr('cell-cm').match(/[r][a][.]/i);
+            var eleP = $(this).attr('cell-cm').match(/[p][a]/i);
+            var eleM = $(this).attr('cell-cm').match(/[m][a]/i);
+
+            var eleCo = $(this).attr('cell-cm').match(/[c][o]*/i);
+            var eleCoD = $(this).attr('cell-cm').match(/[d][o]*/i);
+            var eleCoL = $(this).attr('cell-cm').match(/[l][o]*/i);
+            var eleCoT = $(this).attr('cell-cm').match(/[t][o]*/i);
+            var eleCoM = $(this).attr('cell-cm').match(/[m][o]*/i);
+            var eleCoS = $(this).attr('cell-cm').match(/[s][o]*/i);
+
+            var eleCa = $(this).attr('cell-cm').match(/[c][a]*/i);
+            var eleCaD = $(this).attr('cell-cm').match(/[d][a]*/i);
+            var eleCaL = $(this).attr('cell-cm').match(/[l][a]*/i);
+            var eleCaT = $(this).attr('cell-cm').match(/[t][a]*/i);
+            var eleCaM = $(this).attr('cell-cm').match(/[m][a]*/i);
+            var eleCaS = $(this).attr('cell-cm').match(/[s][a]*/i);
+
+            if (eleW == 'wi') {
+                $(this).css({ 'width': '' + width[1] + 'px'});
+            }
+            if (eleWp == 'wi.') {
+                $(this).css({ 'width': '' + widthPer[1] + '%'});
+            }
+            if (eleH == 'ht') {
+                $(this).css({ 'height': '' + height[1] + 'px'});
+            }
+            if (eleB == 'bo') {
+                borderNum=border[2]-1
+                $(this).css({ 'border': '' + border[1] + 'px solid ' + colors[borderNum] + ''});
+            }
+            if (eleBg == 'bg') {
+                backGroundNum=backGround[1]-1
+                $(this).css({ 'background-color': '' + colors[backGroundNum] + ''});
+            }
+            if (eleR == 'ra') {
+                $(this).css({ 'border-radius': '' + radius[1] + 'px'});
+            }
+            if (eleRp == 'ra.') {
+                $(this).css({ 'border-radius': '' + radiusPer[1] + '%'});
+            }
+            if (eleP == 'pa') {
+                $(this).css({ 'padding': '' + padding[1] + 'px'});
+            }
+            if (eleM == 'ma') {
+                $(this).css({ 'margin': '' + margin[1] + 'px'});
+            }
+
+            if (eleCo == 'co') {
+                $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+            }
+            if (eleCa == 'ca') {
+                $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+            }
+            if (ele != 'c') {
+                if (eleD == 'd') {
+                    var colSizeDesk = colDesk[1] * 5
+                    $(this).css({ 'width': '' + colSizeDesk + '%', 'flex-grow': '0' });
+                }
+                if (eleCoD == 'do') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaD == 'da') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+                if (eleL == 'l' & eleD != 'd') {
+                    var colSizeLarge = colLarge[1] * 5
+                    $(this).css({ 'width': '' + colSizeLarge + '%', 'flex-grow': '0' });
+                }
+                if (eleCoL == 'lo') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaL == 'la') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+                if (eleT == 't' & eleD != 'd' & eleL != 'l') {
+                    var colSizeTab = colTab[1] * 5
+                    $(this).css({ 'width': '' + colSizeTab + '%', 'flex-grow': '0' });
+                }
+                if (eleCoT == 'to') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaT == 'ta') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+                if (eleM == 'm' & eleD != 'd' & eleL != 'l' & eleT != 't') {
+                    var colSizeMobile = colMobile[1] * 5
+                    $(this).css({ 'width': '' + colSizeMobile + '%', 'flex-grow': '0' });
+                }
+                if (eleCoM == 'mo') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaM == 'ma') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+                if (eleS == 's' & eleD != 'd' & eleL != 'l' & eleT != 't' & eleM != 'm') {
+                    var colSizeSmall = colSmall[1] * 5
+                    $(this).css({ 'width': '' + colSizeSmall + '%', 'flex-grow': '0' });
+                }
+                if (eleCoS == 'so') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaS == 'sa') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+
+            var winWidth = $(window).width();
+            if (winWidth >= 1484.99 && winWidth <= 2500) {
+                if (eleD == 'd') {
+                    var colSizeDesk = colDesk[1] * 5
+                    $(this).css({ 'width': '' + colSizeDesk + '%', 'flex-grow': '0' });
+                }
+                if (eleCoD == 'do') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaD == 'da') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            if (winWidth >= 1199.99 && winWidth <= 1484.98) {
+                if (eleD == 'd') {
+                    var colSizeDesk = colDesk[1] * 5
+                    $(this).css({ 'width': '' + colSizeDesk + '%', 'flex-grow': '0' });
+                }
+                if (eleCoD == 'do') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaD == 'da') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            if (winWidth >= 991.99 && winWidth <= 1199.98) {
+                if (eleL == 'l') {
+                    var colSizeLarge = colLarge[1] * 5
+                    $(this).css({ 'width': '' + colSizeLarge + '%', 'flex-grow': '0' });
+                }
+                if (eleCoL == 'lo') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaL == 'la') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            if (winWidth >= 767.99 && winWidth <= 991.98) {
+                if (eleT == 't') {
+                    var colSizeTab = colTab[1] * 5
+                    $(this).css({ 'width': '' + colSizeTab + '%', 'flex-grow': '0' });
+                }
+                if (eleCoT == 'to') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaL == 'ta') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            if (winWidth >= 575.99 && winWidth <= 767.98) {
+                if (eleM == 'm') {
+                    var colSizeMobile = colMobile[1] * 5
+                    $(this).css({ 'width': '' + colSizeMobile + '%', 'flex-grow': '0' });
+                }
+                if (eleCoM == 'mo') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaM == 'ma') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            if (winWidth >= 319.98 && winWidth <= 575.98) {
+                if (eleS == 's') {
+                    var colSizeSmall = colSmall[1] * 5
+                    $(this).css({ 'width': '' + colSizeSmall + '%', 'flex-grow': '0' });
+                }
+                if (eleCoS == 'so') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaS == 'sa') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+            else if (winWidth < 319.98) {
+                if (eleS == 's') {
+                    var colSizeSmall = colSmall[1] * 5
+                    $(this).css({ 'width': '' + colSizeSmall + '%', 'flex-grow': '0' });
+                }
+                if (eleCoS == 'so') {
+                    $(this).css({ 'width': 'min-content', 'flex-grow': '1' });
+                }
+                if (eleCaS == 'sa') {
+                    $(this).css({ 'width': 'max-content', 'flex-grow': '0' });
+                }
+            }
+
+            if (ele == 'c') {
+                var colSize = col[1] * 5
+                $(this).css({ 'width': '' + colSize + '%', 'flex-grow': '0' });
+            }
+        })
+        $("[cell-cm]").each(function () {
+            var shadowTopLeft = $(this).attr('cell-cm').match(/[w](\d{1,})[^\w\*](\d{1,})/i);
+            var shadowTopRight = $(this).attr('cell-cm').match(/[x](\d{1,})[^\w\*](\d{1,})/i);
+            var shadowBottomLeft = $(this).attr('cell-cm').match(/[y](\d{1,})[^\w\*](\d{1,})/i);
+            var shadowBottomRight = $(this).attr('cell-cm').match(/[z](\d{1,})[^\w\*](\d{1,})/i);
+
+            var eleTl = $(this).attr('cell-cm').match(/[w]/i);
+            var eleTr = $(this).attr('cell-cm').match(/[x]/i);
+            var eleBl = $(this).attr('cell-cm').match(/[y]/i);
+            var eleBr = $(this).attr('cell-cm').match(/[z]/i);
+
+            if (eleTl == 'w') {
+                var shadowTopLeftNum = shadowTopLeft[2] - 1
+                var neg = shadowTopLeft[1] * (-1)
+                $(this).css({ 'box-shadow': '' + neg + 'px ' + neg + 'px 15px 0px ' + colors[shadowTopLeftNum] + '' });
+            }
+            if (eleTr == 'x') {
+                var shadowTopRightNum = shadowTopRight[2] - 1
+                var neg = shadowTopRight[1] * (-1)
+                var pos = shadowTopRight[1] * (1)
+                $(this).css({ 'box-shadow': '' + pos + 'px ' + neg + 'px 15px 0px ' + colors[shadowTopRightNum] + '' });
+            }
+            if (eleBl == 'y') {
+                var shadowBottomLeftNum = shadowBottomLeft[2] - 1
+                var neg = shadowBottomLeft[1] * (-1)
+                var pos = shadowBottomLeft[1] * (1)
+                $(this).css({ 'box-shadow': '' + neg + 'px ' + pos + 'px 15px 0px ' + colors[shadowBottomLeftNum] + '' });
+            }
+            if (eleBr == 'z') {
+                var shadowBottomRightNum = shadowBottomRight[2] - 1
+                var neg = shadowBottomRight[1] * (-1)
+                var pos = shadowBottomRight[1] * (1)
+                $(this).css({ 'box-shadow': '' + pos + 'px ' + pos + 'px 15px 0px ' + colors[shadowBottomRightNum] + '' });
+            }
+        })
+    })
+        .resize();
+});
