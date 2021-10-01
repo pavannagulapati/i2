@@ -41,7 +41,7 @@ $(document).ready(function () {
                 $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '-' + widthRight + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                 $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                $(".as-left-close").click(function () {
+                $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                     var slide = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[a][s](\d{1,})[^\w\*](\d{1,})/i);
                     var widthLeft = slide[1] * 5;
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                     }
                 });
-                $(".as-right-close").click(function () {
+                $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                     var slide = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[a][s](\d{1,})[^\w\*](\d{1,})/i);
                     var widthRightDesk = slide[2] * 5;
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                     }
                 });
-                $(".as-left-open").click(function () {
+                $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                     var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                     var aaValue = '[-aa' + aa[1] + ':';
 
@@ -96,7 +96,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                     }
                 });
-                $(".as-right-open").click(function () {
+                $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                     var slide = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[da[s](\d{1,})[^\w\*](\d{1,})/i);
                     var widthRight = slide[2] * 5;
                     var marg = 100 - widthRight;
@@ -157,7 +157,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '-' + widthRightDesk + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -176,7 +176,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -195,7 +195,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
                         var marg = 100 - widthRightDesk;
@@ -271,7 +271,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-right': '-' + widthRightLarge + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
 
@@ -290,7 +290,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -309,7 +309,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -326,7 +326,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
                         var marg = 100 - widthRightLarge;
@@ -385,7 +385,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-right': '-' + widthRightTab + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
 
@@ -404,7 +404,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -423,7 +423,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -440,7 +440,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
                         var marg = 100 - widthRightTab;
@@ -499,7 +499,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '-' + widthRightMobile + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
 
@@ -518,7 +518,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -537,7 +537,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -554,7 +554,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
                         var marg = 100 - widthRightMobile;
@@ -613,7 +613,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -632,7 +632,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -651,7 +651,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -668,7 +668,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
@@ -731,7 +731,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '-' + widthRightDesk + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -750,7 +750,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -769,7 +769,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -786,7 +786,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
                         var marg = 100 - widthRightDesk;
@@ -847,7 +847,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '-' + widthRightDesk + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -866,7 +866,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -885,7 +885,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -902,7 +902,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[d][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
                         var marg = 100 - widthRightDesk;
@@ -963,7 +963,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-right': '-' + widthRightLarge + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
 
@@ -982,7 +982,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -1001,7 +1001,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -1018,7 +1018,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[l][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
                         var marg = 100 - widthRightLarge;
@@ -1079,7 +1079,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-right': '-' + widthRightTab + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
 
@@ -1098,7 +1098,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -1117,7 +1117,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -1134,7 +1134,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[t][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
                         var marg = 100 - widthRightTab;
@@ -1195,7 +1195,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '-' + widthRightMobile + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
 
@@ -1214,7 +1214,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -1233,7 +1233,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -1250,7 +1250,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[m][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
                         var marg = 100 - widthRightMobile;
@@ -1311,7 +1311,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -1330,7 +1330,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -1349,7 +1349,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -1366,7 +1366,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
@@ -1427,7 +1427,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".as-left-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -1446,7 +1446,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-close").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -1465,7 +1465,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".as-left-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-left-open').click(function () {
                         var aa = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[-][a][a](\d{1,})/i);
                         var aaValue = '[-aa' + aa[1] + ':';
 
@@ -1482,7 +1482,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + aaValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".as-right-open").click(function () {
+                    $('[cell-sl^="' + aaValue + '"] .as-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-aa"]').attr('cell-sl').match(/[s][a](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
@@ -1542,7 +1542,6 @@ $(document).ready(function () {
             var slideMobile = $(this).attr('cell-sl').match(/[m][n](\d{1,})[^\w\*](\d{1,})/i);
             var slideSmall = $(this).attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
 
-
             var ele = $(this).attr('cell-sl').match(/[n][s]/i);
             var eleD = $(this).attr('cell-sl').match(/[d][n]/i);
             var eleL = $(this).attr('cell-sl').match(/[l][n]/i);
@@ -1572,7 +1571,7 @@ $(document).ready(function () {
                 $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '0', "position": "relative" });
                 $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '-' + widthRight + '%', "position": "relative" });
 
-                $(".left-close").click(function () {
+                $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
                     var slide = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[n][s](\d{1,})[^\w\*](\d{1,})/i);
                     var widthLeft = slide[1] * 5;
 
@@ -1591,7 +1590,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                     }
                 });
-                $(".right-close").click(function () {
+                $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                     var slide = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[n][s](\d{1,})[^\w\*](\d{1,})/i);
                     var widthRight = slide[2] * 5;
 
@@ -1610,7 +1609,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                     }
                 });
-                $(".left-open").click(function () {
+                $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                     var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                     var naValue = '[-na' + na[1] + ':';
 
@@ -1626,7 +1625,7 @@ $(document).ready(function () {
                         $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                     }
                 });
-                $(".right-open").click(function () {
+                $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                     var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                     var naValue = '[-na' + na[1] + ':';
 
@@ -1681,7 +1680,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -1701,7 +1700,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -1721,7 +1720,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -1737,7 +1736,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -1789,7 +1788,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '-' + widthRightLarge + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideLarge = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[l][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
@@ -1810,7 +1809,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[l][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -1830,7 +1829,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -1846,7 +1845,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -1898,7 +1897,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '-' + widthRightTab + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideTab = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[t][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
@@ -1919,7 +1918,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[t][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -1939,7 +1938,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -1955,7 +1954,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2007,7 +2006,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-left': '0', 'margin-right': '-' + widthRightMobile + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideMobile = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[m][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
@@ -2028,7 +2027,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[m][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -2048,7 +2047,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2064,7 +2063,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2116,7 +2115,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '-' + widthRightSmall + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
@@ -2137,7 +2136,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -2157,7 +2156,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2173,7 +2172,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2229,7 +2228,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -2249,7 +2248,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -2269,7 +2268,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2285,7 +2284,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2339,7 +2338,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
 
@@ -2359,7 +2358,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[d][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -2379,7 +2378,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2395,7 +2394,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2449,7 +2448,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '-' + widthRightLarge + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideLarge = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[l][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
@@ -2470,7 +2469,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[l][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -2490,7 +2489,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2506,7 +2505,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2560,7 +2559,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '-' + widthRightTab + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideTab = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[t][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
@@ -2581,7 +2580,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[t][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -2601,7 +2600,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2617,7 +2616,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2671,7 +2670,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-left': '0', 'margin-right': '-' + widthRightMobile + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideMobile = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[m][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
@@ -2692,7 +2691,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[m][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -2712,7 +2711,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2728,7 +2727,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2782,7 +2781,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '-' + widthRightSmall + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
@@ -2803,7 +2802,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -2823,7 +2822,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2839,7 +2838,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2893,7 +2892,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-left': '0', 'margin-right': '-' + widthRightSmall + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".left-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-close').click(function () {
 
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
@@ -2914,7 +2913,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-close").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[s][n](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -2934,7 +2933,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".left-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .left-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -2950,7 +2949,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + naValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".right-open").click(function () {
+                    $('[cell-sl^="' + naValue + '"] .right-open').click(function () {
                         var na = $(this).closest('[cell-sl^="[-na"]').attr('cell-sl').match(/[-][n][a](\d{1,})/i);
                         var naValue = '[-na' + na[1] + ':';
 
@@ -3037,7 +3036,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
@@ -3058,7 +3057,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -3078,7 +3077,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3094,7 +3093,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3149,7 +3148,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '-' + widthRightLarge + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideLarge = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[l][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
@@ -3170,7 +3169,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[l][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -3190,7 +3189,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3206,7 +3205,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3261,7 +3260,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '-' + widthRightTab + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideTab = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[t][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
@@ -3282,7 +3281,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[t][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -3302,7 +3301,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3318,7 +3317,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3375,7 +3374,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '-' + widthRightMobile + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
 
@@ -3394,7 +3393,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -3413,7 +3412,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3430,7 +3429,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
                         var marg = 100 - widthRightMobile;
@@ -3489,7 +3488,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -3508,7 +3507,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -3527,7 +3526,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3544,7 +3543,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
@@ -3604,7 +3603,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '0', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '-' + widthRight + '%', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -3623,7 +3622,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -3642,7 +3641,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3658,7 +3657,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3711,7 +3710,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
@@ -3732,7 +3731,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -3752,7 +3751,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3768,7 +3767,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3825,7 +3824,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '0', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '-' + widthRight + '%', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -3844,7 +3843,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -3863,7 +3862,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3879,7 +3878,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3932,7 +3931,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightDesk + '%', 'margin-left': '0', 'margin-right': '-' + widthRightDesk + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftDesk = slideDesk[1] * 5;
@@ -3953,7 +3952,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideDesk = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[d][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightDesk = slideDesk[2] * 5;
 
@@ -3973,7 +3972,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightDeskNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -3989,7 +3988,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftDeskNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4046,7 +4045,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '0', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '-' + widthRight + '%', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -4065,7 +4064,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -4084,7 +4083,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4100,7 +4099,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4153,7 +4152,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightLarge + '%', 'margin-left': '0', 'margin-right': '-' + widthRightLarge + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideLarge = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[l][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftLarge = slideLarge[1] * 5;
@@ -4174,7 +4173,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideLarge = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[l][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightLarge = slideLarge[2] * 5;
 
@@ -4194,7 +4193,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightLargeNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4210,7 +4209,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftLargeNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4267,7 +4266,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '0', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-left': '0', 'margin-right': '-' + widthRight + '%', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -4286,7 +4285,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -4305,7 +4304,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4321,7 +4320,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4374,7 +4373,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '0', 'transition': 'margin-right 4s', "position": "relative" });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightTab + '%', 'margin-left': '0', 'margin-right': '-' + widthRightTab + '%', 'transition': 'margin-right 4s', "position": "relative" });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
 
                         var slideTab = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[t][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftTab = slideTab[1] * 5;
@@ -4395,7 +4394,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find(' [cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideTab = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[t][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightTab = slideTab[2] * 5;
 
@@ -4415,7 +4414,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightTabNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4431,7 +4430,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftTabNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4491,7 +4490,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '-' + widthRight + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -4510,7 +4509,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -4529,7 +4528,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4546,7 +4545,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
                         var marg = 100 - widthRight;
@@ -4606,7 +4605,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '-' + widthRightMobile + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightMobile + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftMobile = slideMobile[1] * 5;
 
@@ -4625,7 +4624,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
 
@@ -4644,7 +4643,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightMobileNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4661,7 +4660,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftMobileNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slideMobile = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[m][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightMobile = slideMobile[2] * 5;
                         var marg = 100 - widthRightMobile;
@@ -4723,7 +4722,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '-' + widthRight + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -4742,7 +4741,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -4761,7 +4760,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4778,7 +4777,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
                         var marg = 100 - widthRight;
@@ -4838,7 +4837,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -4857,7 +4856,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -4876,7 +4875,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -4893,7 +4892,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
@@ -4955,7 +4954,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '-' + widthRight + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRight + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeft = slide[1] * 5;
 
@@ -4974,7 +4973,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
 
@@ -4993,7 +4992,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -5010,7 +5009,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slide = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[r][s](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRight = slide[2] * 5;
                         var marg = 100 - widthRight;
@@ -5070,7 +5069,7 @@ $(document).ready(function () {
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '-' + widthRightSmall + '%', 'position': 'absolute', 'z-index': '' + z + '' });
                     $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-ro"]').last().css({ 'overflow': 'hidden', 'width': '' + widthRightSmall + '%', 'margin-right': '0', 'position': 'absolute', 'z-index': '' + z + '' });
 
-                    $(".rs-left-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthLeftSmall = slideSmall[1] * 5;
 
@@ -5089,7 +5088,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lc"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-close").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-close').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
 
@@ -5108,7 +5107,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-rc"]').last().css("transition", 'margin-right ' + speedRightSmallNum + 's');
                         }
                     });
-                    $(".rs-left-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-left-open').click(function () {
                         var ra = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[-][r][a](\d{1,})/i);
                         var raValue = '[-ra' + ra[1] + ':';
 
@@ -5125,7 +5124,7 @@ $(document).ready(function () {
                             $('[cell-sl^="' + raValue + '"]').find('[cell-sl^="["][cell-sl$="]"][cell-sl*="-lo"]').first().css("transition", 'margin-left ' + speedLeftSmallNum + 's');
                         }
                     });
-                    $(".rs-right-open").click(function () {
+                    $('[cell-sl^="' + raValue + '"] .rs-right-open').click(function () {
                         var slideSmall = $(this).closest('[cell-sl^="[-ra"]').attr('cell-sl').match(/[s][r](\d{1,})[^\w\*](\d{1,})/i);
                         var widthRightSmall = slideSmall[2] * 5;
                         var marg = 100 - widthRightSmall;
