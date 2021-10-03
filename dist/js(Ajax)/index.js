@@ -2935,3 +2935,156 @@ $(document).ajaxStop(function () {
   }
   });
 });
+//For Nav Bar
+$(document).ajaxStop(function () {
+  $(window).resize(function () {
+    $('[cell-nv^="[-nv"]').each(function () {
+
+      var nv = $(this).attr('cell-nv').match(/[-][n][v](\d{1,})/i);
+      var nvValue = '[-nv' + nv[1] + ':';
+
+      var height = $(this).attr('cell-nv').match(/[h][^,]*?(\d{1,})*/i);
+
+      var eleH = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[h]/i);
+      var eleFx = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[f][x]/i);
+      var eleSk = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[s][k]/i);
+
+      var ht = $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-na"] [cell-nv^="[-lg"]').height();
+      var wt = $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-na"]').width();
+
+      if (eleFx == 'fx') {
+        $('[cell-nv^="' + nvValue + '"]').closest('header').css({ 'position': 'fixed', 'zIndex': '9999999' });
+      }
+      if (eleSk == 'sk') {
+        $('[cell-nv^="' + nvValue + '"]').closest('header').css({ 'position': 'sticky', 'zIndex': '9999999' });
+      }
+
+      var width = $(window).width();
+      if (width >= 1484.99 && width <= 2500) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', '' + height[1] + 'px');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', '' + height[1] + 'px');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'relative' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '0px' })
+        $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-sr"] [cell-nv^="[-li"]').css({ 'marginLeft': '0px', 'transition': '.1s' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '9999999' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').slideDown()
+      }
+      if (width >= 1199.99 && width <= 1484.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', '' + height[1] + 'px');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', '' + height[1] + 'px');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'relative' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '0px' })
+        $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-sr"] [cell-nv^="[-li"]').css({ 'marginLeft': '0px', 'transition': '.1s' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '9999999' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').slideDown()
+      }
+      if (width >= 991.99 && width <= 1199.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', '' + height[1] + 'px');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', '' + height[1] + 'px');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'relative' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '0px' })
+        $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-sr"] [cell-nv^="[-li"]').css({ 'marginLeft': '0px', 'transition': '.1s' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '9999999' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').slideDown()
+      }
+      if (width >= 767.99 && width <= 991.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', 'auto');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', 'auto');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'absolute' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '' + ht + 'px' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '999999' })
+      }
+      if (width >= 575.99 && width <= 767.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', 'auto');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', 'auto');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'absolute' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '' + ht + 'px' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '999999' })
+      }
+      if (width >= 319.98 && width <= 575.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', 'auto');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', 'auto');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'absolute' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '' + ht + 'px' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '999999' })
+      }
+      else if (width < 319.98) {
+        if (eleH == 'h') {
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-na"]').css('height', 'auto');
+          $('[cell-nv^="' + nvValue + '"]').find('[cell-nv^="[-lg"]').css('height', 'auto');
+        }
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-lg"]').css({ 'zIndex': '9999999', 'position': 'absolute' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'marginTop': '' + ht + 'px' })
+        $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').css({ 'zIndex': '999999' })
+      }
+
+      var countL = 0;
+      $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-sl"] button').click(function () {
+
+          var eleSl = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[s][l]/i);
+
+          countL++;
+          if (countL % 2 != 0) {
+            if (eleSl == 'sl') {
+              $(this).closest('[cell-nv^="[-nv"][cell-nv$="]"][cell-nv*="-sl"]').find('[cell-nv^="[-li"]').css('margin-left', '-100%');
+              $(this).closest('[cell-nv^="[-nv"][cell-nv$="]"][cell-nv*="-sl"]').find('[cell-nv^="[-li"]').css('transition', 'margin-left 2s');
+            }
+          }
+          if (countL % 2 == 0) {
+            if (eleSl == 'sl') {
+              $(this).closest('[cell-nv^="[-nv"][cell-nv$="]"][cell-nv*="-sl"]').find('[cell-nv^="[-li"]').css('margin-left', '0');
+              $(this).closest('[cell-nv^="[-nv"][cell-nv$="]"][cell-nv*="-sl"]').find('[cell-nv^="[-li"]').css('transition', 'margin-left 2s');
+            }
+          }
+      })
+      var countR = 0;
+      $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-sr"] button').click(function () {
+          var eleSr = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[s][r]/i);
+          countR++;
+          if (countR % 2 != 0) {
+            if (eleSr == 'sr') {
+              $(this).find('[cell-nv^="[-li"]').css('margin-left', '100%');
+              $(this).find('[cell-nv^="[-li"]').css('transition', 'margin-left 2s');
+            }
+          }
+          if (countR % 2 == 0) {
+            if (eleSr == 'sr') {
+              $(this).find('[cell-nv^="[-li"]').css('margin-left', '0');
+              $(this).find('[cell-nv^="[-li"]').css('transition', 'margin-left 2s');
+            }
+          }
+      })
+      var countT = 0;
+      $('[cell-nv^="' + nvValue + '"][cell-nv$="]"][cell-nv*="-st"] button').click(function () {
+          var eleSt = $('[cell-nv^="' + nvValue + '"]').attr('cell-nv').match(/[s][t]/i);
+          countT++;
+          var ht = $('[cell-nv^="[-nv"] [cell-nv^="[-lg"]').height();
+          $('[cell-nv^="[-nv"] [cell-nv^="[-li"]').css({ 'marginTop': '' + ht + 'px' })
+          if (countT % 2 != 0) {
+            if (eleSt == 'st') {
+              $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').slideUp()
+            }
+          }
+          if (countT % 2 == 0) {
+            if (eleSt == 'st') {
+              $('[cell-nv^="' + nvValue + '"] [cell-nv^="[-li"]').slideDown()
+            }
+          }
+      })
+    })
+
+  })
+    .resize();
+});
